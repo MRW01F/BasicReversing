@@ -12,7 +12,8 @@ undefined8 main(void)
   int local_18; //n
   int local_14; //i
 //  long local_10;
-  
+
+//  GARBAGE
 //  local_10 = *(long *)(in_FS_OFFSET + 0x28);
 
         //bool is_prime = true;
@@ -44,24 +45,33 @@ LAB_00101217:
         pbVar2 = (basic_ostream *)
                  std::basic_ostream<char,std::char_traits<char>>::operator<<
                            ((basic_ostream<char,std::char_traits<char>> *)std::cout,local_18);
+                           //cout << n << ...
         std::operator<<(pbVar2," is a prime number \n");
       }
       else {
         pbVar2 = (basic_ostream *)
                  std::basic_ostream<char,std::char_traits<char>>::operator<<
                            ((basic_ostream<char,std::char_traits<char>> *)std::cout,local_18);
+                           //cout << n << ...
         std::operator<<(pbVar2," is not a prime number \n");
       }
-      if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
-                    /* WARNING: Subroutine does not return */
-        __stack_chk_fail();
-      }
+
+      //GARBAGE
+      // if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+      //               /* WARNING: Subroutine does not return */
+      //   __stack_chk_fail();
+      // }
       return 0;
     }
+
+    //the for loop logic
+    // (n % i == 0)
     if (local_18 % local_14 == 0) {
+      //is_prime = false
       bVar1 = false;
       goto LAB_00101217; //Unconditional Jump
     }
+    // ++i (i=i+1)
     local_14 = local_14 + 1;
   } while( true );
 }
